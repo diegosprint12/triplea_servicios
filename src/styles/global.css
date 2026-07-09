@@ -1,0 +1,170 @@
+@import './tokens.css';
+@import './reset.css';
+
+/* === Base === */
+html {
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-normal);
+  font-size: 100%;
+  color: var(--clr-text);
+  background-color: var(--clr-white);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* === Tipografía === */
+h1 {
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  font-weight: var(--font-weight-bold);
+}
+
+h2 {
+  font-size: clamp(1.5rem, 3.5vw, 2.25rem);
+  font-weight: var(--font-weight-semibold);
+}
+
+h3 {
+  font-size: clamp(1.125rem, 2.5vw, 1.5rem);
+  font-weight: var(--font-weight-semibold);
+}
+
+/* === Contenedor === */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding-inline: var(--content-padding);
+}
+
+.container-sm {
+  width: 100%;
+  max-width: var(--max-width-sm);
+  margin-inline: auto;
+  padding-inline: var(--content-padding);
+}
+
+/* === Botones === */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-md);
+  font-weight: var(--font-weight-semibold);
+  font-size: 1rem;
+  line-height: 1;
+  transition:
+    background-color var(--transition-fast),
+    color var(--transition-fast),
+    box-shadow var(--transition-fast),
+    transform var(--transition-fast);
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn--primary {
+  background-color: var(--clr-accent);
+  color: var(--clr-primary);
+  border-color: var(--clr-accent);
+}
+
+.btn--primary:hover {
+  background-color: #e08f4a;
+  border-color: #e08f4a;
+}
+
+.btn--outline {
+  background-color: transparent;
+  color: var(--clr-white);
+  border-color: var(--clr-white);
+}
+
+.btn--outline:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.btn--emergency {
+  background-color: var(--clr-white);
+  color: var(--clr-emergency);
+  border-color: var(--clr-white);
+  font-size: 1.125rem;
+  padding: 1rem 2rem;
+}
+
+.btn--emergency:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.btn--whatsapp {
+  background-color: #25d366;
+  color: var(--clr-white);
+  border-color: #25d366;
+}
+
+.btn--whatsapp:hover {
+  background-color: #1da851;
+  border-color: #1da851;
+}
+
+/* === Secciones === */
+.section {
+  padding-block: var(--spacing-xl);
+}
+
+.section--dark {
+  background-color: var(--clr-primary);
+  color: var(--clr-text-on-dark);
+}
+
+.section--light {
+  background-color: var(--clr-light);
+}
+
+.section--white {
+  background-color: var(--clr-white);
+}
+
+.section__title {
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+/* === Scroll reveal === */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+
+.scroll-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* === Visually hidden (accesibilidad) === */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
