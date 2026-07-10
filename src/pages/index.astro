@@ -1,17 +1,34 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import ValueBar from '../components/ValueBar.astro';
+import ServiciosSection from '../components/ServiciosSection.astro';
+import BannerEmergencia from '../components/BannerEmergencia.astro';
+import Footer from '../components/Footer.astro';
+import ScrollReveal from '../components/ScrollReveal.astro';
 ---
 
 <BaseLayout>
+  <Header />
+
   <main>
-    <!-- Header, Hero, ValueBar, Servicios, Banner, Footer se agregan en PR2 -->
-    <section class="section section--dark" style="min-height: 100vh; display: flex; align-items: center; justify-content: center;">
-      <div class="container" style="text-align: center;">
-        <h1>AAA Servicios Generales</h1>
-        <p style="margin-top: 1rem; font-size: 1.25rem; opacity: 0.8;">
-          Soluciones Inmediatas, Resultados Duraderos
-        </p>
-      </div>
-    </section>
+    <Hero />
+
+    <ScrollReveal>
+      <ValueBar />
+    </ScrollReveal>
+
+    <ScrollReveal>
+      <ServiciosSection />
+    </ScrollReveal>
+
+    <ScrollReveal>
+      <BannerEmergencia />
+    </ScrollReveal>
   </main>
+
+  <ScrollReveal>
+    <Footer />
+  </ScrollReveal>
 </BaseLayout>
