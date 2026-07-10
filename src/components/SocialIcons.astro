@@ -1,0 +1,54 @@
+---
+// SocialIcons — SVG inline Facebook, Instagram, WhatsApp
+---
+
+<div class="social" aria-label="Redes sociales">
+  <a href="https://facebook.com/aaaservicios" target="_blank" rel="noopener noreferrer" class="social__link" aria-label="Facebook">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+    </svg>
+  </a>
+
+  <a href="https://instagram.com/aaaservicios" target="_blank" rel="noopener noreferrer" class="social__link" aria-label="Instagram">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+    </svg>
+  </a>
+
+  <a href="https://wa.me/573001234567" target="_blank" rel="noopener noreferrer" class="social__link" aria-label="WhatsApp">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" />
+    </svg>
+  </a>
+</div>
+
+<style>
+  .social {
+    display: flex;
+    gap: var(--spacing-md);
+    align-items: center;
+  }
+
+  .social__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: var(--clr-text-on-dark);
+    background: rgba(255, 255, 255, 0.1);
+    transition:
+      background var(--transition-fast),
+      color var(--transition-fast),
+      transform var(--transition-fast);
+  }
+
+  .social__link:hover {
+    background: var(--clr-accent);
+    color: var(--clr-primary);
+    transform: translateY(-2px);
+  }
+</style>

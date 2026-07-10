@@ -1,0 +1,25 @@
+---
+// Logo — SVG inline "AAA" estilizado, fill blanco, link a /#inicio
+---
+
+<a href="/#inicio" class="logo" aria-label="AAA Servicios Generales — Ir al inicio">
+  <svg width="130" height="44" viewBox="0 0 130 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <text x="2" y="32" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="30" fill="var(--clr-white)" letter-spacing="5">AAA</text>
+    <rect x="2" y="38" width="126" height="3" rx="1.5" fill="var(--clr-accent)" />
+  </svg>
+</a>
+
+<style>
+  .logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    flex-shrink: 0;
+  }
+
+  .logo svg {
+    display: block;
+    height: 40px;
+    width: auto;
+  }
+</style>

@@ -1,0 +1,134 @@
+---
+// Hero — two-column layout (desktop) / stack (mobile), bg #0a1931
+---
+
+<section class="hero" id="inicio">
+  <div class="hero__inner container">
+    <div class="hero__content">
+      <h1 class="hero__title">Soluciones Inmediatas,<br />Resultados Duraderos</h1>
+      <p class="hero__subtitle">
+        Expertos en servicios generales para hogares y empresas en Bucaramanga.
+        Atención profesional 24/7.
+      </p>
+      <div class="hero__actions">
+        <a
+          href="https://wa.me/573001234567"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn--whatsapp"
+          aria-label="Escríbenos por WhatsApp"
+        >
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" />
+          </svg>
+          Escríbenos
+        </a>
+        <a href="#servicios" class="btn btn--outline">
+          Solicitar Asistencia
+        </a>
+      </div>
+    </div>
+    <div class="hero__image">
+      <picture>
+        <source srcset="/images/hero.webp" type="image/webp" />
+        <img
+          src="/images/hero.jpg"
+          alt="Profesional de mantenimiento uniformado listo para asistir"
+          width="600"
+          height="500"
+          loading="eager"
+          decoding="async"
+        />
+      </picture>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    background: var(--clr-primary);
+    color: var(--clr-text-on-dark);
+    padding-top: calc(64px + var(--spacing-xl));
+    padding-bottom: var(--spacing-xl);
+    overflow: hidden;
+  }
+
+  .hero__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+    align-items: center;
+    min-height: 70vh;
+  }
+
+  .hero__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+  }
+
+  .hero__title {
+    margin: 0;
+    line-height: 1.1;
+  }
+
+  .hero__subtitle {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    opacity: 0.85;
+    max-width: 30em;
+    margin: 0;
+  }
+
+  .hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+  }
+
+  .hero__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero__image picture,
+  .hero__image img {
+    display: block;
+    width: 100%;
+    max-width: 560px;
+    height: auto;
+    border-radius: var(--radius-lg);
+    object-fit: cover;
+    aspect-ratio: 6 / 5;
+    background: linear-gradient(135deg, #1a3a5c 0%, #0d2240 50%, #0a1931 100%);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  }
+
+  /* === Mobile === */
+  @media (max-width: 767px) {
+    .hero {
+      padding-top: calc(64px + var(--spacing-lg));
+      padding-bottom: var(--spacing-lg);
+    }
+
+    .hero__inner {
+      grid-template-columns: 1fr;
+      gap: var(--spacing-lg);
+      min-height: auto;
+    }
+
+    .hero__content {
+      text-align: center;
+      align-items: center;
+    }
+
+    .hero__actions {
+      justify-content: center;
+    }
+
+    .hero__image {
+      order: -1;
+    }
+  }
+</style>

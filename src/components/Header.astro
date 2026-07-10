@@ -1,0 +1,35 @@
+---
+// Header — fixed top, bg #0a1931, flex container con Logo + Nav + WhatsAppButton
+import Logo from './Logo.astro';
+import Nav from './Nav.astro';
+import WhatsAppButton from './WhatsAppButton.astro';
+---
+
+<header class="header">
+  <div class="header__inner container">
+    <Logo />
+    <Nav />
+    <WhatsAppButton />
+  </div>
+</header>
+
+<style>
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: var(--clr-primary);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-md);
+    padding-block: 0.75rem;
+    min-height: 64px;
+  }
+</style>
