@@ -1,60 +1,67 @@
 ---
-// Footer — bg #0a1931, 3 columnas (nav links, servicios, contacto+redes)
+// Footer — bg #0a1931, logo izquierda + línea separadora + 3 columnas
+import FooterLogo from './FooterLogo.astro';
 import SocialIcons from './SocialIcons.astro';
 ---
 
 <footer class="footer" role="contentinfo">
   <div class="container">
-    <div class="footer__grid">
-      <!-- Columna 1: Navegación -->
-      <div class="footer__col">
-        <h4 class="footer__heading">Navegación</h4>
-        <ul class="footer__list" role="list">
-          <li><a href="#inicio">Inicio</a></li>
-          <li><a href="#servicios">Servicios</a></li>
-          <li><a href="#nosotros">Nosotros</a></li>
-          <li><a href="#proyectos">Proyectos</a></li>
-          <li><a href="#contacto">Contacto</a></li>
-        </ul>
+    <div class="footer__main">
+      <div class="footer__brand">
+        <FooterLogo />
       </div>
+      <div class="footer__divider" role="separator" aria-hidden="true"></div>
+      <div class="footer__grid">
+        <!-- Columna 1: Navegación -->
+        <div class="footer__col">
+          <h4 class="footer__heading">Navegación</h4>
+          <ul class="footer__list" role="list">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
 
-      <!-- Columna 2: Servicios -->
-      <div class="footer__col">
-        <h4 class="footer__heading">Servicios</h4>
-        <ul class="footer__list" role="list">
-          <li>Servicios Generales</li>
-          <li>Mantenimiento Residencial</li>
-          <li>Instalaciones Técnicas</li>
-          <li>Emergencias 24/7</li>
-        </ul>
-      </div>
+        <!-- Columna 2: Servicios -->
+        <div class="footer__col">
+          <h4 class="footer__heading">Servicios</h4>
+          <ul class="footer__list" role="list">
+            <li>Servicios Generales</li>
+            <li>Mantenimiento Residencial</li>
+            <li>Instalaciones Técnicas</li>
+            <li>Emergencias 24/7</li>
+          </ul>
+        </div>
 
-      <!-- Columna 3: Contacto + Redes -->
-      <div class="footer__col">
-        <h4 class="footer__heading">Contacto</h4>
-        <ul class="footer__list footer__list--contact" role="list">
-          <li>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-            </svg>
-            <span>+57 (300) 123-4567</span>
-          </li>
-          <li>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-              <polyline points="22,6 12,13 2,6" />
-            </svg>
-            <span>info@aaaservicios.co</span>
-          </li>
-          <li>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-              <circle cx="12" cy="10" r="3" />
-            </svg>
-            <span>Área Metropolitana de Bucaramanga</span>
-          </li>
-        </ul>
-        <SocialIcons />
+        <!-- Columna 3: Contacto + Redes -->
+        <div class="footer__col">
+          <h4 class="footer__heading">Contacto</h4>
+          <ul class="footer__list footer__list--contact" role="list">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+              </svg>
+              <span>+57 (300) 123-4567</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+              <span>info@aaaservicios.co</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              <span>Área Metropolitana de Bucaramanga</span>
+            </li>
+          </ul>
+          <SocialIcons />
+        </div>
       </div>
     </div>
 
@@ -71,10 +78,39 @@ import SocialIcons from './SocialIcons.astro';
     padding-block: var(--spacing-xl) var(--spacing-lg);
   }
 
+  .footer__main {
+    display: flex;
+    gap: var(--spacing-xl);
+    align-items: flex-start;
+  }
+
+  .footer__brand {
+    flex-shrink: 0;
+    width: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-sm) 0;
+  }
+
+  .footer__divider {
+    width: 1px;
+    align-self: stretch;
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.02),
+      rgba(255, 255, 255, 0.15) 30%,
+      rgba(255, 255, 255, 0.15) 70%,
+      rgba(255, 255, 255, 0.02)
+    );
+    flex-shrink: 0;
+  }
+
   .footer__grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: var(--spacing-xl);
+    flex: 1;
   }
 
   .footer__heading {
@@ -139,9 +175,33 @@ import SocialIcons from './SocialIcons.astro';
   }
 
   @media (max-width: 767px) {
+    .footer__main {
+      flex-direction: column;
+      gap: var(--spacing-lg);
+    }
+
+    .footer__divider {
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0.02),
+        rgba(255, 255, 255, 0.15) 30%,
+        rgba(255, 255, 255, 0.15) 70%,
+        rgba(255, 255, 255, 0.02)
+      );
+    }
+
     .footer__grid {
       grid-template-columns: 1fr;
       gap: var(--spacing-lg);
+    }
+
+    .footer__brand {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding: var(--spacing-lg) 0;
     }
   }
 </style>
