@@ -1,15 +1,24 @@
 ---
-// ServiceCard — icono SVG + título + <ul> subservicios
-// Uso: <ServiceCard><svg slot="icon">...</svg><span slot="title">...</span><ul slot="services">...</ul></ServiceCard>
+// ServiceCard — imagen + icono SVG + título + <ul> subservicios
+// Uso: <ServiceCard image="/path.jpg"><svg slot="icon">...</svg><span slot="title">...</span><ul slot="services">...</ul></ServiceCard>
 ---
 
 <div class="card">
-  <div class="card__icon">
-    <slot name="icon" />
-  </div>
-  <h3 class="card__title"><slot name="title" /></h3>
-  <div class="card__services">
-    <slot name="services" />
+  {
+    Astro.slots.has('image') && (
+      <div class="card__image">
+        <slot name="image" />
+      </div>
+    )
+  }
+  <div class="card__body">
+    <div class="card__icon">
+      <slot name="icon" />
+    </div>
+    <h3 class="card__title"><slot name="title" /></h3>
+    <div class="card__services">
+      <slot name="services" />
+    </div>
   </div>
 </div>
 
@@ -17,12 +26,11 @@
   .card {
     background: var(--clr-white);
     border-radius: var(--radius-lg);
-    padding: var(--spacing-lg);
+    overflow: hidden;
     box-shadow: var(--shadow-card);
     border: 1px solid var(--clr-border);
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-md);
     transition:
       transform var(--transition-base),
       box-shadow var(--transition-base);
@@ -32,6 +40,32 @@
     transform: translateY(-4px);
     box-shadow: var(--shadow-lg);
     border-color: var(--clr-accent);
+  }
+
+  .card__image {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+  }
+
+  .card__image :global(img) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform var(--transition-base);
+  }
+
+  .card:hover .card__image :global(img) {
+    transform: scale(1.05);
+  }
+
+  .card__body {
+    padding: var(--spacing-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    flex: 1;
   }
 
   .card__icon {
