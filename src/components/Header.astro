@@ -32,4 +32,10 @@ import WhatsAppButton from './WhatsAppButton.astro';
     padding-block: 0.75rem;
     min-height: 64px;
   }
+
+  @media (max-width: 767px) {
+    .header__inner :global(.whatsapp-btn) {
+      display: none;
+    }
+  }
 </style>
