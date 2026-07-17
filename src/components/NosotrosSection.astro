@@ -1,0 +1,164 @@
+---
+// NosotrosSection — Quiénes somos con narrativa y diferenciadores
+---
+
+<section class="nosotros" id="nosotros" aria-label="Sobre nosotros">
+  <div class="container">
+    <h2 class="section__title section__title--yellow">SOBRE NOSOTROS</h2>
+    <div class="nosotros__header">
+      <p class="nosotros__subtitle">Expertos en servicios generales para hogar</p>
+      <div class="nosotros__divider" aria-hidden="true"></div>
+    </div>
+    <div class="nosotros__grid">
+      <div class="nosotros__text">
+        <p>En AAA Servicios Generales nos dedicamos a ofrecer soluciones prácticas y profesionales para el mantenimiento, adecuación y reforma de tu hogar o negocio. Sabemos que cada proyecto es único, por eso trabajamos de la mano contigo para entender tus necesidades y ofrecerte resultados que realmente marquen la diferencia.</p>
+        <p>Nuestra cobertura abarca todo el Área Metropolitana de Bucaramanga, incluyendo Floridablanca, Piedecuesta y Girón. Estamos disponibles las 24 horas del día, los 7 días de la semana, porque sabemos que las emergencias no tienen horario.</p>
+        <p class="nosotros__cta">Respaldamos cada trabajo con compromiso de calidad, puntualidad y transparencia. Desde una reparación menor hasta un proyecto de adecuación completo, ponemos todo nuestro conocimiento y experiencia a tu servicio.</p>
+      </div>
+      <div class="nosotros__highlights">
+        <div class="nosotros__highlight">
+          <svg class="nosotros__highlight-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
+            <path d="M15 2H9a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1" />
+            <path d="M9 13l2 2 4-4" />
+          </svg>
+          <div class="nosotros__highlight-text">
+            <strong>Presupuesto sin compromiso</strong>
+            <span>Te asesoramos antes de cualquier cobro</span>
+          </div>
+        </div>
+        <div class="nosotros__highlight">
+          <svg class="nosotros__highlight-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+          </svg>
+          <div class="nosotros__highlight-text">
+            <strong>Respuesta rápida y eficiente</strong>
+            <span>Atención prioritaria en cada servicio</span>
+          </div>
+        </div>
+        <div class="nosotros__highlight">
+          <svg class="nosotros__highlight-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10" />
+            <polyline points="12 6 12 12 16 14" />
+          </svg>
+          <div class="nosotros__highlight-text">
+            <strong>Atención 24/7</strong>
+            <span>Sin recargos por emergencias</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .nosotros {
+    background: var(--clr-light);
+    padding-block: var(--spacing-xl);
+  }
+
+  .section__title--yellow {
+    color: var(--clr-accent);
+    font-size: clamp(0.9rem, 1.8vw, 1.1rem);
+    letter-spacing: 3px;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .nosotros__header {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-md);
+  }
+
+  .nosotros__subtitle {
+    font-size: clamp(1.3rem, 3.5vw, 2rem);
+    font-weight: var(--font-weight-bold);
+    color: var(--clr-primary);
+    margin: 0;
+    max-width: 700px;
+    letter-spacing: 1px;
+  }
+
+  .nosotros__divider {
+    width: 80px;
+    height: 4px;
+    background: var(--clr-accent);
+    border-radius: 2px;
+  }
+
+  .nosotros__grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: var(--spacing-xl);
+    align-items: start;
+  }
+
+  .nosotros__text {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--clr-text);
+  }
+
+  .nosotros__text p {
+    margin: 0 0 var(--spacing-md);
+  }
+
+  .nosotros__cta {
+    font-weight: var(--font-weight-medium);
+  }
+
+  .nosotros__highlights {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    padding-top: var(--spacing-sm);
+  }
+
+  .nosotros__highlight {
+    display: flex;
+    gap: var(--spacing-md);
+    align-items: flex-start;
+  }
+
+  .nosotros__highlight-icon {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+    color: var(--clr-accent);
+    margin-top: 2px;
+  }
+
+  .nosotros__highlight-text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nosotros__highlight-text strong {
+    font-size: 1rem;
+    color: var(--clr-primary);
+    margin-bottom: 2px;
+  }
+
+  .nosotros__highlight-text span {
+    font-size: 0.9rem;
+    color: var(--clr-text-muted);
+  }
+
+  @media (max-width: 767px) {
+    .nosotros__grid {
+      grid-template-columns: 1fr;
+      gap: var(--spacing-lg);
+    }
+
+    .nosotros__text {
+      font-size: 1rem;
+    }
+
+    .nosotros__highlights {
+      gap: var(--spacing-md);
+    }
+  }
+</style>
