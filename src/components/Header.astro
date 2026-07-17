@@ -22,6 +22,11 @@ import WhatsAppButton from './WhatsAppButton.astro';
     z-index: 1000;
     background: var(--clr-primary);
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    transition: box-shadow var(--transition-base);
+  }
+
+  .header--scrolled {
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
   }
 
   .header__inner {
@@ -39,3 +44,18 @@ import WhatsAppButton from './WhatsAppButton.astro';
     }
   }
 </style>
+
+<script>
+  const header = document.querySelector('.header');
+  let ticking = false;
+
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        header.classList.toggle('header--scrolled', window.scrollY > 0);
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+</script>

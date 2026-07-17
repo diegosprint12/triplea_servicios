@@ -1,5 +1,6 @@
 ---
 // BaseLayout — HTML shell con SEO, meta tags, Open Graph, JSON-LD
+import '../styles/global.css';
 import IconWhatsApp from '../components/IconWhatsApp.astro';
 
 export interface Props {
@@ -38,7 +39,7 @@ const {
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
 
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="canonical" href="https://aaaservicios.co" />
 
     <!-- JSON-LD: LocalBusiness -->
@@ -65,10 +66,7 @@ const {
 
     <title>{title}</title>
 
-    <!-- System fonts — sin Google Fonts por performance -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-    <link rel="stylesheet" href="/src/styles/global.css" />
+    <!-- Fuentes tipográficas -->
   </head>
   <body>
     <slot />

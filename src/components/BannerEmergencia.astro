@@ -1,17 +1,16 @@
 ---
-// BannerEmergencia — rectángulo azul solapado sobre Servicios, icono auricular + texto + WA verde
+// BannerEmergencia — sección contacto con CTA emergencia + info de contacto
 import IconWhatsApp from './IconWhatsApp.astro';
 ---
 
-<section class="emergency-banner" id="contacto" aria-label="Emergencias">
+<section class="emergency-banner" id="contacto" aria-label="Contacto y emergencias">
   <div class="container">
-    <div class="emergency-banner__inner">
+    <div class="emergency-banner__card">
       <div class="emergency-banner__left">
         <div class="emergency-banner__icon" aria-hidden="true">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-	          <path fill="currentColor" fill-rule="evenodd" d="M422.401 217.174c-6.613-67.84-46.72-174.507-170.666-174.507c-123.947 0-164.054 106.667-170.667 174.507c-23.2 8.805-38.503 31.079-38.4 55.893v29.867c0 32.99 26.744 59.733 59.733 59.733c32.99 0 59.734-26.744 59.734-59.733v-29.867c-.108-24.279-14.848-46.095-37.334-55.253c4.267-39.254 25.174-132.48 126.934-132.48s122.453 93.226 126.72 132.48c-22.44 9.178-37.106 31.009-37.12 55.253v29.867a59.95 59.95 0 0 0 33.92 53.76c-8.96 16.853-31.787 39.68-87.894 46.506c-11.215-17.03-32.914-23.744-51.788-16.023c-18.873 7.72-29.646 27.717-25.71 47.725s21.48 34.432 41.872 34.432a42.67 42.67 0 0 0 37.973-23.68c91.52-10.454 120.747-57.6 129.92-85.334c24.817-8.039 41.508-31.301 41.173-57.386v-29.867c.103-24.814-15.2-47.088-38.4-55.893m-302.933 85.76c0 9.425-7.641 17.066-17.067 17.066s-17.066-7.64-17.066-17.066v-29.867a17.067 17.067 0 1 1 34.133 0zm264.533-29.867c0-9.426 7.641-17.067 17.067-17.067s17.067 7.641 17.067 17.067v29.867c0 9.425-7.641 17.066-17.067 17.066s-17.067-7.64-17.067-17.066z" />
+            <path fill="currentColor" fill-rule="evenodd" d="M422.401 217.174c-6.613-67.84-46.72-174.507-170.666-174.507c-123.947 0-164.054 106.667-170.667 174.507c-23.2 8.805-38.503 31.079-38.4 55.893v29.867c0 32.99 26.744 59.733 59.733 59.733c32.99 0 59.734-26.744 59.734-59.733v-29.867c-.108-24.279-14.848-46.095-37.334-55.253c4.267-39.254 25.174-132.48 126.934-132.48s122.453 93.226 126.72 132.48c-22.44 9.178-37.106 31.009-37.12 55.253v29.867a59.95 59.95 0 0 0 33.92 53.76c-8.96 16.853-31.787 39.68-87.894 46.506c-11.215-17.03-32.914-23.744-51.788-16.023c-18.873 7.72-29.646 27.717-25.71 47.725s21.48 34.432 41.872 34.432a42.67 42.67 0 0 0 37.973-23.68c91.52-10.454 120.747-57.6 129.92-85.334c24.817-8.039 41.508-31.301 41.173-57.386v-29.867c.103-24.814-15.2-47.088-38.4-55.893m-302.933 85.76c0 9.425-7.641 17.066-17.067 17.066s-17.066-7.64-17.066-17.066v-29.867a17.067 17.067 0 1 1 34.133 0zm264.533-29.867c0-9.426 7.641-17.067 17.067-17.067s17.067 7.641 17.067 17.067v29.867c0 9.425-7.641 17.066-17.067 17.066s-17.067-7.64-17.067-17.066z" />
           </svg>
-
         </div>
         <div class="emergency-banner__text">
           <h2 class="emergency-banner__title">¿TIENES UNA EMERGENCIA?</h2>
@@ -29,6 +28,51 @@ import IconWhatsApp from './IconWhatsApp.astro';
         302 5330660
       </a>
     </div>
+
+    <div class="contacto__grid">
+      <div class="contacto__item">
+        <span class="contacto__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+            <circle cx="12" cy="10" r="3" />
+          </svg>
+        </span>
+        <div class="contacto__item-text">
+          <strong>Dirección</strong>
+          <span>Acapulco — Girón, Área Metropolitana de Bucaramanga</span>
+        </div>
+      </div>
+      <div class="contacto__item">
+        <span class="contacto__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+          </svg>
+        </span>
+        <div class="contacto__item-text">
+          <strong>Llámanos</strong>
+          <a href="tel:+573025330660">302 5330660</a>
+        </div>
+      </div>
+      <div class="contacto__item">
+        <span class="contacto__icon"><IconWhatsApp size={18} color="var(--clr-accent)" /></span>
+        <div class="contacto__item-text">
+          <strong>WhatsApp</strong>
+          <a href="https://wa.me/573025330660" target="_blank" rel="noopener noreferrer">302 5330660</a>
+        </div>
+      </div>
+      <div class="contacto__item">
+        <span class="contacto__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10" />
+            <polyline points="12 6 12 12 16 14" />
+          </svg>
+        </span>
+        <div class="contacto__item-text">
+          <strong>Horario</strong>
+          <span>24 horas, 7 días a la semana</span>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -38,9 +82,10 @@ import IconWhatsApp from './IconWhatsApp.astro';
     z-index: 2;
     margin-top: -3rem;
     padding-bottom: var(--spacing-xl);
+    scroll-margin-top: 120px;
   }
 
-  .emergency-banner__inner {
+  .emergency-banner__card {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -87,31 +132,119 @@ import IconWhatsApp from './IconWhatsApp.astro';
     font-weight: var(--font-weight-medium);
   }
 
+  .contacto__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+  }
+
+  .contacto__item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md);
+    background: var(--clr-light);
+    border-radius: var(--radius-md);
+    min-height: 80px;
+  }
+
+  .contacto__icon {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--clr-accent);
+  }
+
+  .contacto__icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .contacto__item-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .contacto__item-text strong {
+    font-size: 0.875rem;
+    color: var(--clr-primary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .contacto__item-text span,
+  .contacto__item-text a {
+    font-size: 0.95rem;
+    color: var(--clr-text);
+    text-decoration: none;
+    line-height: 1.4;
+  }
+
+  .contacto__item-text a:hover {
+    color: var(--clr-accent);
+  }
+
+  @media (max-width: 1023px) {
+    .contacto__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
   @media (max-width: 767px) {
     .emergency-banner {
       margin-top: -2rem;
       padding-bottom: var(--spacing-lg);
     }
 
-    .emergency-banner__inner {
+    .emergency-banner__card {
       flex-direction: column;
       text-align: center;
-      padding: var(--spacing-lg);
+      padding: var(--spacing-md);
+      gap: var(--spacing-sm);
     }
 
     .emergency-banner__left {
       flex-direction: column;
       text-align: center;
+      gap: var(--spacing-sm);
     }
 
     .emergency-banner__icon {
-      width: 70px;
-      height: 70px;
+      width: 48px;
+      height: 48px;
     }
 
     .emergency-banner__icon svg {
-      width: 58px;
-      height: 58px;
+      width: 40px;
+      height: 40px;
+    }
+
+    .emergency-banner__title {
+      font-size: clamp(0.95rem, 4.5vw, 1.1rem);
+    }
+
+    .emergency-banner__subtitle {
+      font-size: clamp(0.85rem, 3.5vw, 0.95rem);
+    }
+
+    .emergency-banner__card .btn {
+      font-size: 0.9rem;
+      padding: 0.6rem 1.2rem;
+    }
+
+    .contacto__grid {
+      grid-template-columns: 1fr;
+      gap: var(--spacing-md);
+    }
+
+    .contacto__item {
+      min-height: auto;
+      padding: var(--spacing-sm) var(--spacing-md);
     }
   }
 </style>

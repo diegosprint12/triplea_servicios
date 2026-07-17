@@ -27,8 +27,8 @@ import IconWhatsApp from './IconWhatsApp.astro';
           <h4 class="footer__heading">Navegación</h4>
           <ul class="footer__list footer__list--nav" role="list">
             <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#servicios">Servicios</a></li>
             <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#servicios">Servicios</a></li>
             <li><a href="#contacto">Contacto</a></li>
           </ul>
         </div>
@@ -91,7 +91,19 @@ import IconWhatsApp from './IconWhatsApp.astro';
   }
 
   .footer__brand-location {
-    display: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-sm);
+    font-size: 0.875rem;
+    color: var(--clr-text-on-dark);
+    opacity: 0.85;
+  }
+
+  .footer__brand-location svg {
+    flex-shrink: 0;
+    color: var(--clr-accent);
   }
 
   .footer__brand-whatsapp {
@@ -152,13 +164,13 @@ import IconWhatsApp from './IconWhatsApp.astro';
   
   .footer__list--contact a {
     opacity: 1;
-    color: #ffff;
+    color: var(--clr-white);
   }
 
   .footer__list--nav a {
     cursor: pointer;
     opacity: 1;
-    color: #ffff;
+    color: var(--clr-white);
   }
 
   .footer__list--nav a:hover {
@@ -169,7 +181,7 @@ import IconWhatsApp from './IconWhatsApp.astro';
   .footer__list--services li:hover,
   .footer__list--contact li:hover {
     opacity: 1;
-    color: #dddd;
+    color: #ddd;
   }
 
   .footer__list--contact a:hover {
@@ -232,19 +244,7 @@ import IconWhatsApp from './IconWhatsApp.astro';
     }
 
     .footer__brand-location {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: var(--spacing-sm);
-      margin-top: var(--spacing-sm);
-      font-size: 0.875rem;
-      color: var(--clr-text-on-dark);
-      opacity: 0.85;
-    }
-
-    .footer__brand-location svg {
-      flex-shrink: 0;
-      color: var(--clr-accent);
+      font-size: 0.9rem;
     }
 
     .footer__brand-whatsapp {
