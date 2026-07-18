@@ -15,37 +15,13 @@
         <p>Nuestra cobertura abarca todo el Área Metropolitana de Bucaramanga, incluyendo Floridablanca, Piedecuesta y Girón. Estamos disponibles las 24 horas del día, los 7 días de la semana, porque sabemos que las emergencias no tienen horario.</p>
         <p class="nosotros__cta">Respaldamos cada trabajo con compromiso de calidad, puntualidad y transparencia. Desde una reparación menor hasta un proyecto de adecuación completo, ponemos todo nuestro conocimiento y experiencia a tu servicio.</p>
       </div>
-      <div class="nosotros__highlights">
-        <div class="nosotros__highlight">
-          <svg class="nosotros__highlight-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
-            <path d="M15 2H9a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1" />
-            <path d="M9 13l2 2 4-4" />
-          </svg>
-          <div class="nosotros__highlight-text">
-            <strong>Presupuesto sin compromiso</strong>
-            <span>Te asesoramos antes de cualquier cobro</span>
-          </div>
-        </div>
-        <div class="nosotros__highlight">
-          <svg class="nosotros__highlight-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
-          </svg>
-          <div class="nosotros__highlight-text">
-            <strong>Respuesta rápida y eficiente</strong>
-            <span>Atención prioritaria en cada servicio</span>
-          </div>
-        </div>
-        <div class="nosotros__highlight">
-          <svg class="nosotros__highlight-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <circle cx="12" cy="12" r="10" />
-            <polyline points="12 6 12 12 16 14" />
-          </svg>
-          <div class="nosotros__highlight-text">
-            <strong>Atención 24/7</strong>
-            <span>Sin recargos por emergencias</span>
-          </div>
-        </div>
+      <div class="nosotros__image">
+        <img
+          src="/images/plumber.jpg"
+          alt="Técnico profesional de AAA Servicios Generales"
+          loading="lazy"
+          decoding="async"
+        />
       </div>
     </div>
   </div>
@@ -94,7 +70,7 @@
     display: grid;
     grid-template-columns: 1.2fr 1fr;
     gap: var(--spacing-xl);
-    align-items: start;
+    align-items: stretch;
   }
 
   .nosotros__text {
@@ -111,41 +87,19 @@
     font-weight: var(--font-weight-medium);
   }
 
-  .nosotros__highlights {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-lg);
-    padding-top: var(--spacing-sm);
+  .nosotros__image {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+    height: 100%;
+    min-height: 400px;
   }
 
-  .nosotros__highlight {
-    display: flex;
-    gap: var(--spacing-md);
-    align-items: flex-start;
-  }
-
-  .nosotros__highlight-icon {
-    width: 28px;
-    height: 28px;
-    flex-shrink: 0;
-    color: var(--clr-accent);
-    margin-top: 2px;
-  }
-
-  .nosotros__highlight-text {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .nosotros__highlight-text strong {
-    font-size: 1rem;
-    color: var(--clr-primary);
-    margin-bottom: 2px;
-  }
-
-  .nosotros__highlight-text span {
-    font-size: 0.9rem;
-    color: var(--clr-text-muted);
+  .nosotros__image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   @media (max-width: 767px) {
@@ -158,8 +112,13 @@
       font-size: 1rem;
     }
 
-    .nosotros__highlights {
-      gap: var(--spacing-md);
+    .nosotros__image {
+      min-height: auto;
+    }
+
+    .nosotros__image img {
+      aspect-ratio: 16 / 9;
+      max-height: 280px;
     }
   }
 </style>

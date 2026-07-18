@@ -1,7 +1,6 @@
 ---
 // Footer — bg #0a1931, logo izquierda + línea separadora + 3 columnas
 import FooterLogo from './FooterLogo.astro';
-import IconWhatsApp from './IconWhatsApp.astro';
 ---
 
 <footer class="footer" role="contentinfo">
@@ -14,10 +13,6 @@ import IconWhatsApp from './IconWhatsApp.astro';
             <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
           </svg>
           <span>Área Metropolitana de Bucaramanga</span>
-        </div>
-        <div class="footer__brand-whatsapp">
-          <IconWhatsApp size={18} color="var(--clr-accent)" />
-          <a href="https://wa.me/573025330660" target="_blank" rel="noopener noreferrer">302 5330660</a>
         </div>
       </div>
       <div class="footer__divider" role="separator" aria-hidden="true"></div>
@@ -42,22 +37,7 @@ import IconWhatsApp from './IconWhatsApp.astro';
           </ul>
         </div>
 
-        <!-- Columna 3: Contacto -->
-        <div class="footer__col">
-          <h4 class="footer__heading">Contacto</h4>
-          <ul class="footer__list footer__list--contact" role="list">
-            <li>
-              <svg class="contact-icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-              </svg>
-              <span>Área Metropolitana de Bucaramanga</span>
-            </li>
-            <li>
-              <span class="contact-icon"><IconWhatsApp size={18} color="var(--clr-accent)" /></span>
-              <a href="https://wa.me/573025330660" target="_blank" rel="noopener noreferrer">302 5330660</a>
-            </li>
-          </ul>
-        </div>
+
       </div>
     </div>
 
@@ -106,10 +86,6 @@ import IconWhatsApp from './IconWhatsApp.astro';
     color: var(--clr-accent);
   }
 
-  .footer__brand-whatsapp {
-    display: none;
-  }
-
   .footer__divider {
     width: 1px;
     align-self: stretch;
@@ -125,7 +101,7 @@ import IconWhatsApp from './IconWhatsApp.astro';
 
   .footer__grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-columns: 1fr 1fr;
     gap: var(--spacing-xl);
     flex: 1;
   }
@@ -162,11 +138,6 @@ import IconWhatsApp from './IconWhatsApp.astro';
     opacity: 0.85;
   }
   
-  .footer__list--contact a {
-    opacity: 1;
-    color: var(--clr-white);
-  }
-
   .footer__list--nav a {
     cursor: pointer;
     opacity: 1;
@@ -176,37 +147,6 @@ import IconWhatsApp from './IconWhatsApp.astro';
   .footer__list--nav a:hover {
     opacity: 1;
     color: var(--clr-accent);
-  }
-
-  .footer__list--services li:hover,
-  .footer__list--contact li:hover {
-    opacity: 1;
-    color: #ddd;
-  }
-
-  .footer__list--contact a:hover {
-    opacity: 1;
-    color: var(--clr-accent);
-  }
-
-  .footer__list--contact {
-    gap: var(--spacing-md);
-  }
-
-  .footer__list--contact li {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-sm);
-    white-space: nowrap;
-  }
-
-  .footer__list--contact li .contact-icon {
-    flex-shrink: 0;
-    color: var(--clr-accent);
-  }
-
-  .footer__list--contact a {
-    cursor: pointer;
   }
 
   .footer__bottom {
@@ -247,24 +187,5 @@ import IconWhatsApp from './IconWhatsApp.astro';
       font-size: 0.9rem;
     }
 
-    .footer__brand-whatsapp {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: var(--spacing-sm);
-      margin-top: var(--spacing-xs);
-      font-size: 0.875rem;
-      color: var(--clr-accent);
-    }
-
-    .footer__brand-whatsapp svg {
-      flex-shrink: 0;
-    }
-
-    .footer__brand-whatsapp a {
-      color: var(--clr-text-on-dark);
-      text-decoration: none;
-      opacity: 0.85;
-    }
   }
 </style>
