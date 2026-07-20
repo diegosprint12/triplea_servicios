@@ -10,8 +10,8 @@ export interface Props {
 }
 
 const {
-  title = 'AAA Servicios Generales | Soluciones Inmediatas, Resultados Duraderos',
-  description = 'Servicios generales profesionales en Bucaramanga: plomería, electricidad, pintura y limpieza. Atención 24/7.',
+  title = 'AAA Servicios Generales | Plomería, Electricidad y Mantenimiento en Área Metropolitana de Bucaramanga',
+  description = 'Expertos en servicios generales en Bucaramanga, Girón, Floridablanca y Piedecuesta. Plomería, electricidad, pintura y mantenimiento. Atención 24/7.',
   ogImage = '/images/hero.webp',
 } = Astro.props;
 ---
@@ -40,20 +40,29 @@ const {
     <meta name="twitter:description" content={description} />
 
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="canonical" href="https://aaaservicios.co" />
+    <link rel="canonical" href="https://tripleaservicios.vercel.app" />
 
     <!-- JSON-LD: LocalBusiness -->
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "AAA Servicios Generales",
-      "description": "Servicios generales profesionales: plomería, electricidad, pintura y limpieza. Atención 24/7.",
-      "url": "https://aaaservicios.co",
+      "description": "Expertos en servicios generales en Bucaramanga, Girón, Floridablanca y Piedecuesta. Plomería, electricidad, pintura y mantenimiento. Atención 24/7.",
+      "url": "https://tripleaservicios.vercel.app",
       "telephone": "302 5330660",
-      "areaServed": "Área Metropolitana de Bucaramanga",
+      "image": "https://tripleaservicios.vercel.app/images/hero.webp",
+      "priceRange": "$$",
+      "areaServed": [
+        "Área Metropolitana de Bucaramanga",
+        "Girón",
+        "Floridablanca",
+        "Piedecuesta"
+      ],
       "address": {
         "@type": "PostalAddress",
-        "addressLocality": "Área Metropolitana de Bucaramanga",
+        "streetAddress": "Acapulco",
+        "addressLocality": "Girón",
+        "addressRegion": "Santander",
         "addressCountry": "CO"
       },
       "openingHoursSpecification": {
@@ -61,6 +70,20 @@ const {
         "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
         "opens": "00:00",
         "closes": "23:59"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Servicios Generales",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Plomería" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Electricidad" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pintura" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Limpieza" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Jardinería" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Carpintería" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Reparaciones" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Impermeabilización" } }
+        ]
       }
     })} />
 
